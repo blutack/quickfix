@@ -92,9 +92,7 @@ func (s *TLSTestSuite) TestInsecureSkipVerify() {
 
 	tlsConfig, err := loadTLSConfig(s.settings.GlobalSettings())
 	s.Nil(err)
-	s.NotNil(tlsConfig)
-
-	s.True(tlsConfig.InsecureSkipVerify)
+	s.Nil(tlsConfig)
 }
 
 func (s *TLSTestSuite) TestInsecureSkipVerifyAndCerts() {
